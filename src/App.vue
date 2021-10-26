@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <Timer class="timer" />
+  <ButtonPanel />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import ButtonPanel from "./components/ButtonPanel.vue";
+import Timer from "./components/Timer";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Timer,
+    ButtonPanel,
   },
 };
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  background: rgb(74, 74, 74);
+  display: flex;
+  flex-flow: column;
+}
+.timer {
+  flex: 0 0 auto;
+  margin: 20px auto;
 }
 </style>
