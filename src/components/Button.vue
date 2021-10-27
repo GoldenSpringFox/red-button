@@ -1,5 +1,5 @@
 <template>
-  <div class="btn" :style="{ background: color }">
+  <div class="btn" :style="{ background: color, color: textColor }">
     <p class="text primary">{{ this.primaryText }}</p>
     <p class="text secondary">{{ this.secondaryText }}</p>
   </div>
@@ -10,7 +10,7 @@ export default {
   name: "Button",
   props: {
     color: String,
-    clickedColor: String,
+    textColor: String,
     primaryText: String,
     secondaryText: String,
   },
@@ -19,6 +19,7 @@ export default {
 
 <style scoped>
 .btn {
+  background: darkgray;
   border-radius: 50%;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 1), 0 0 0 6px grey;
   position: relative;
@@ -29,8 +30,11 @@ export default {
   align-items: center;
   text-align: center;
 }
-.red-btn:hover {
+.btn:hover {
   cursor: pointer;
+}
+.btn:active {
+  box-shadow: 0 0 0 6px grey;
 }
 .text {
   color: white;
