@@ -1,6 +1,10 @@
 <template>
-  <Timer class="timer" />
-  <ButtonPanel />
+  <div class="top">
+    <Timer class="center" />
+  </div>
+  <div class="mid">
+    <ButtonPanel class="button-panel center" />
+  </div>
 </template>
 
 <script>
@@ -26,8 +30,21 @@ body {
   display: flex;
   flex-flow: column;
 }
-.timer {
-  flex: 0 0 auto;
-  margin: 20px auto;
+.top {
+  height: 20vh;
+}
+.mid {
+  height: 80vh;
+}
+.center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-panel {
+  height: 100%;
+  width: 100%;
 }
 </style>

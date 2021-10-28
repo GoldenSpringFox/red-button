@@ -69,15 +69,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.counter.big {
-  font-size: 17vmin;
-  margin-top: 30px;
-}
-.counter.small {
-  font-size: 24px;
-  width: 200px;
-  height: 50px;
-}
-</style>

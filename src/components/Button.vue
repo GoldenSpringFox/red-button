@@ -51,7 +51,7 @@ export default {
   -o-user-select: none;
 }
 .text.primary {
-  font-size: 17vmin;
+  font-size: 600%;
   margin-top: 30px;
 }
 .text.secondary {
