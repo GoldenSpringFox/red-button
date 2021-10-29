@@ -15,11 +15,6 @@ export default {
   components: {
     RedButton,
   },
-  data() {
-    return {
-      redButtonDiameter: null,
-    };
-  },
 };
 </script>
 
@@ -27,8 +22,8 @@ export default {
 .button-panel {
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 50vmin 1fr;
-  grid-template-rows: 1fr 50vmin 2fr;
+  grid-template-columns: 1fr var(--main-button-size) 1fr;
+  grid-template-rows: 1fr var(--main-button-size) 2fr;
   grid-template-areas:
     "top top top"
     "left main right"

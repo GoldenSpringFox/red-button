@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style>
+@import "./assets/styles/variables.css";
+
 body {
   margin: 0;
 }
@@ -32,19 +34,22 @@ body {
 }
 .top {
   height: 20vh;
+  font-size: 1px;
 }
 .mid {
   height: 80vh;
+  font-size: 1px;
 }
+.button-panel {
+  height: 100%;
+  width: 100%;
+}
+
 .center {
   margin: 0;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.button-panel {
-  height: 100%;
-  width: 100%;
 }
 </style>

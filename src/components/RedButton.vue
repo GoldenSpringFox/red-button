@@ -19,22 +19,27 @@ export default {
   data() {
     return {
       counter: 0,
-      redButton: {
-        color: "rgb(225, 25, 25)",
-        primaryText: "0",
-        secondaryText: "0",
-      },
     };
   },
-  watch: {
-    counter() {
-      this.redButton.primaryText = this.counterFormattedWithLetters();
-      this.redButton.secondaryText = this.counterFormattedWithCommas();
+  computed: {
+    mainText() {
+      return this.counterFormattedWithLetters();
+    },
+    secondaryText() {
+      return this.counter >= 1000 ? this.counterFormattedWithCommas() : null;
+    },
+    redButton() {
+      return {
+        color: "rgb(225, 25, 25)",
+        textColor: "white",
+        primaryText: this.mainText,
+        secondaryText: this.secondaryText,
+      };
     },
   },
   methods: {
     clicked() {
-      this.counter = this.counter + 1;
+      this.counter += 100;
     },
     heldDown() {
       this.redButton.color = "rgb(200, 25, 25)";
