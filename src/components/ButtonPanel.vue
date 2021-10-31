@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import RedButton from "./RedButton.vue";
+import RedButton from "./button_types/RedButton.vue";
 
 export default {
   name: "ButtonPanel",

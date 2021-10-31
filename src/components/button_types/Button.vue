@@ -31,14 +31,14 @@ export default {
     };
   },
   mounted() {
-    window.addEventListener("resize", this.myEventHandler);
-    this.myEventHandler();
+    window.addEventListener("resize", this.buttonSizeEventHandler);
+    this.buttonSizeEventHandler();
   },
   unmounted() {
-    window.removeEventListener("resize", this.myEventHandler);
+    window.removeEventListener("resize", this.buttonSizeEventHandler);
   },
   methods: {
-    myEventHandler() {
+    buttonSizeEventHandler() {
       this.buttonSize = Math.min(
         this.$refs.button.offsetWidth,
         this.$refs.button.offsetHeight
